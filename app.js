@@ -2,6 +2,8 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 
+var port = process.env.PORT || 8080;
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
@@ -15,4 +17,9 @@ app.get("/", function(req,res){
 
 app.get("/home", function(req,res){
     res.render("index");
+});
+
+app.listen(port, function(){
+    // console.log(process.env.PORT);
+    console.log("Server is running");
 });
