@@ -2,6 +2,8 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 const axios = require("axios");
+var key = require("./key");
+var dictKey = process.env.dictKey || key.getDictKey();
 
 var port = process.env.PORT || 8080;
 
@@ -23,7 +25,7 @@ app.get("/home", function (req, res) {
 app.get("/results", function (req, res) {
 
 var search = req.query.text;
-var url = "https://dictionaryapi.com/api/v3/references/collegiate/json/" + search + "?key=d813862e-9113-43f5-ad8a-143954d0fab4";
+var url = "https://dictionaryapi.com/api/v3/references/collegiate/json/" + search + "?key=" + dictKey ;
     
  axios.get(url)
   .then(function (response) {
@@ -31,9 +33,6 @@ var url = "https://dictionaryapi.com/api/v3/references/collegiate/json/" + searc
     // var data = response.data.toString();
     // console.log(data);
     var data = response.data;
-
-    console.log(req.query.text);
-
     res.render("results", {data: data});
 
     // res.send(data);
