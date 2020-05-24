@@ -1,14 +1,34 @@
-<%- include ("./partials/header") %> 
+<%- include ("./partials/header") %>
 
+<!-- nav bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">englism</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">about</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- search bar -->
 <div class="container">
     <div class="row align-items-center" style="min-height: calc(100vh - 66px);">
         <div class="col-lg-6 mx-auto">
-            <h1> englism</h1>
+            <h1>Need a word?</h1>
             <form action="/results" method="GET">
                 <div class="input-group">
                     <input type="text" class="form-control" name="text" placeholder="Search for...">
                     <span class="input-group-btn">
-                        <button class="btn btn-dark" type="submit" name="action">Search</button> 
+                        <button class="btn btn-dark" type="submit" name="action">Go</button> 
                     </span>
                 </div>
             </form>
