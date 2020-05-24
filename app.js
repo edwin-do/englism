@@ -2,8 +2,8 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 const axios = require("axios");
-var key = require("./key");
-var dictKey = process.env.dictKey || key.getDictKey();
+// var key = require("./key");
+var dictKey = process.env.dictKey || require("./key").getDictKey();
 
 var port = process.env.PORT || 8080;
 
