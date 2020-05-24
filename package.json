@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/edwin-do/englism#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "ejs": "^3.1.3",
-    "express": "^4.17.1",
-    "got": "^11.1.4"
+    "express": "^4.17.1"
   }
 }

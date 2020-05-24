@@ -6,12 +6,9 @@
     <title>englism</title>
 </head>
 <body>
-    <form action="/results" method="GET">
-        <div>
-            <label>Search</label>
-            <input type="text" name="text" placeholder="text">
-        </div>
-        <input type="submit">
-    </form>
+    <% data.forEach(def => { %>
+      <p><%= def.shortdef %></p>
+    <% }) %>
+   
 </body>
 </html>
