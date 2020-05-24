@@ -1,0 +1,43 @@
+ /* colours & themes */
+ .blue{
+    background-color: rgba(79, 94, 134, 0.671);
+}
+
+.red{
+    background-color: rgba(131, 62, 62, 0.842);
+}
+
+.purple{
+    background-color: rgb(71, 63, 90);
+    color: white;
+}
+
+.black{
+    background-color: rgba(0, 0, 0, 0.932);
+    color: white;
+}
+
+.green{
+    background-color: rgb(62, 90, 88);
+    color: white;
+}
+
+.grey{
+    background-color: rgb(80, 79, 82);
+    color: white;
+}
+
+.light-grey{
+    background-color: rgb(202, 201, 204);
+    color: rgb(3, 3, 3);
+}
+
+.pink{
+    background-color: rgb(107, 59, 75);
+    color: white;
+}
+
+.white{
+    background-color: white;
+    color: black;
+}

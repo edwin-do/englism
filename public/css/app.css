@@ -1,0 +1,176 @@
+/* overview */
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    max-width: 100%;
+    min-width: 100%;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+body {
+    max-width: 100%;
+    min-width: 100%;
+    font-family: 'Abel', sans-serif;
+    font-size: 14px;
+    background-color: white;
+}
+
+a { 
+    transition: all 0.3s ease; 
+    text-decoration: none;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+/* responsive img */
+img{
+    width: 85%;
+    height: auto;
+}
+
+/* views */
+@media (min-width:350px) {
+    body {
+        font-size: 10px;
+    }
+    #welcome{
+        font-size: 16px;
+    }
+
+    #i{
+        font-size: 75px;
+    }
+    .wrap{
+        font-size: 75px;
+    }
+
+    #heading{
+        font-size: 70px;
+        margin-bottom: -18px;
+        position: relative;
+        z-index: 2; 
+    }
+    .text h1{
+        font-size:50px;
+        font-weight: 300;
+    }
+
+    .text p{
+        font-size:14px;
+    }
+    #thumbnail{
+        width: 35%;
+        height: auto;
+    }
+    
+}
+
+@media (min-width:600px) {
+    body {
+        font-size: 8px;
+    }
+    #welcome{
+        font-size: 20px;
+    }
+    
+    #i{
+        font-size: 90px;
+    }
+
+    .wrap{
+        font-size: 90px;
+    }
+
+    #heading{
+        font-size: 100px;
+        margin-bottom: -22px;
+        position: relative;
+        z-index: 2; 
+    }
+
+    .text h1{
+        font-size:55px;
+        font-weight: 300;
+    }
+
+    .text p{
+        font-size:16px;
+    }
+    #thumbnail{
+        width: 30%;
+        height: auto;
+    }
+
+}
+
+@media (min-width:800px) {
+    body {
+        font-size: 10px;
+    }
+    h1{
+        font-size: 20px;
+    }
+
+    #i{
+        font-size: 100px;
+    }
+
+    .wrap{
+        font-size: 100px;
+    }
+
+    #heading{
+        font-size: 120px;
+        margin-bottom: -30px;
+        position: relative;
+        z-index: 2; 
+    }
+    .text h1{
+        font-size:50px;
+        font-weight: 300;
+    }
+
+    .text p{
+        font-size:17px;
+    }
+    
+}
+
+@media (min-width:1000px) {
+    body {
+        font-size: 12px;
+    }
+    h1{
+        font-size: 50px;
+    }
+
+    #i{
+        font-size: 120px;
+    }
+
+    .wrap{
+        font-size: 120px;
+    }
+
+    .text h1{
+        font-size:60px;
+        font-weight: 300;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .text p{
+        font-size:17px;
+    }
+
+    #heading{
+        font-size: 140px;
+        margin-bottom: -35px;
+        position: relative;
+        z-index: 2; 
+    }
+}
