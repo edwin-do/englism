@@ -1,0 +1,24 @@
+<%- include ("./partials/header") %> 
+
+<div class="container heading">
+  <h1>Results: <%= search %></h1>
+</div>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2">
+      <% for( let i = 0; i < 3; i++ ) { %>
+        <% var syns = data[i].meta["syns"] %> 
+        <% syns.forEach(words => { %>
+            <div class="col mb-4">
+                <div class="card purple">
+                    <div class="card-body">
+                        <p class="card-text"><%= words %>.</p>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+      <% } %>
+    </div>
+</div>
+   
+<%- include ("./partials/footer") %> 
