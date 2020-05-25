@@ -30,7 +30,7 @@ app.get("/results", function (req, res) {
     .then(function (response) {
         // handle success
         var data = response.data;
-        res.render("results", {data: data});
+        res.render("results", {data: data, search: search});
     })
     .catch(function (error) {
         // handle error
