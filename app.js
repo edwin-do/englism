@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require("body-parser");
 const axios = require("axios");
 var dictKey = process.env.dictKey || require("./key").getDictKey();
+var thesKey = process.env.thesKey || require("./key").getThesKey();
 
 
 var port = process.env.PORT || 8080;
@@ -24,18 +25,41 @@ app.get("/home", function (req, res) {
 
 app.get("/results", function (req, res) {
     var search = req.query.text;
-    var url = "https://dictionaryapi.com/api/v3/references/collegiate/json/" + search + "?key=" + dictKey ;
+    var option = req.query.option;
+    var url = "";
+    
+    if (option == "def"){
+        url = "https://dictionaryapi.com/api/v3/references/collegiate/json/" + search + "?key=" + dictKey ;
+
+        axios.get(url)
+        .then(function (response) {
+            // handle success
+            var data = response.data;
+            res.render("resultsDict", {data: data, search: search});
+        })
+        .catch(function (error) {
+            // handle error
+            console.log(error);
+            res.render("index");
+        })
+    }else if(option == "sym"){
+        url = "https://dictionaryapi.com/api/v3/references/thesaurus/json/" + search + "?key=" + thesKey ;
+        axios.get(url)
+        .then(function (response) {
+            // handle success
+            var data = response.data;
+            res.render("resultsThes", {data: data, search: search});
+        })
+        .catch(function (error) {
+            // handle error
+            console.log(error);
+        })
+    }else{
+        console.log("error");
+        res.render("index");
+    }
         
-    axios.get(url)
-    .then(function (response) {
-        // handle success
-        var data = response.data;
-        res.render("results", {data: data, search: search});
-    })
-    .catch(function (error) {
-        // handle error
-        console.log(error);
-    })
+
 });
 
 

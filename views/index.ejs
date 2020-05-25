@@ -31,11 +31,25 @@
                         <button class="btn btn-dark" type="submit" name="action">Go</button> 
                     </span>
                 </div>
+                <!-- radio dials -->
+                <div class="form-check mt-4">
+                    <input class="form-check-input" type="radio" name="option" id="dictionary" value="def" checked>
+                    <label class="form-check-label" for="dictionary">
+                    Definition
+                    </label>
+                </div>
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio" name="option" id="thesaurus" value="sym">
+                    <label class="form-check-label" for="thesaurus">
+                    Synonym
+                    </label>
+                </div>
             </form>
-            
         </div>
     </div>
 </div>
+
+
 
 
 <%- include ("./partials/footer") %> 
