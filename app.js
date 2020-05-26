@@ -34,7 +34,7 @@ app.get("/results", function (req, res) {
         axios.get(url)
         .then(function (response) {
             // handle success
-            var data = response.data
+            var data = response.data;
             res.render("resultsDict", {data: data, search: search});
         })
         .catch(function (error) {
